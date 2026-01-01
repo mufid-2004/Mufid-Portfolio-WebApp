@@ -1,32 +1,38 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
 # Mufid Portfolio WebApp
 
-A personal portfolio web application built with React and Vite, showcasing projects, skills, experience, and contact information. The project is fully Dockerized for easy setup and consistent runtime.
+A personal portfolio web application built with React and Vite.  
+The website showcases personal information, skills, education, projects, customers, and contact details in a clean and responsive design.
+
+The project is fully Dockerized, allowing any developer to run it easily in a consistent environment without installing dependencies locally.
+
+---
 
 ## Tech Stack
+
 - React
 - Vite
 - JavaScript
+- HTML5
+- CSS3
 - Docker
-- HTML / CSS
 
-## Run with Docker
+---
 
-### Build the Docker image
+## Project Features
+
+- Responsive personal portfolio website
+- Sections: Header, About, Skills, Education, Projects, Customers, Contact
+- Dark mode support
+- Smooth navigation and scrolling
+- Docker support for easy setup and execution
+
+---
+
+## Run the Project with Docker
+
+### 1️⃣ Build the Docker Image
+
+From the project root directory, run:
+
 ```bash
 docker build -t mufid-portfolio .
