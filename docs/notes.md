@@ -1,9 +1,22 @@
-# Technical Notes – Assignment 2
+# Technical Notes – OS LAB Assignment 2
 
 ## Docker Challenge and Solution
 
-The biggest challenge I faced while working with Docker was running a React + Vite application inside a container in development mode.
+The main challenge faced in this assignment was running a React + Vite application inside a Docker container and accessing it from the host machine.
 
-At first, the container was building successfully, but the application was not accessible from the browser. After researching and testing, I realized that Vite binds by default to localhost inside the container, which prevents external access.
+Although the Docker image was built successfully, the application was not accessible from the browser at first. The issue was caused by Vite binding to localhost inside the container by default.
 
-To solve this issue, I modified the run command to use:
+This problem was solved by running the Vite development server using:
+vite --host
+
+This allowed the application to listen on all network interfaces, making it accessible through the mapped Docker port.
+
+## Git and GitHub Lessons Learned
+
+This assignment emphasized professional Git and GitHub practices. Through this work, I learned how to:
+- Organize a clean and professional repository structure
+- Write meaningful commit messages that reflect real development progress
+- Document the project clearly using README files
+- Maintain a clear and professional commit history
+
+Overall, this assignment improved my understanding of Dockerized workflows and professional version control using GitHub.
