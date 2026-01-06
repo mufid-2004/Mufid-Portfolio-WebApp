@@ -1,63 +1,59 @@
 # Mufid Portfolio WebApp
 
-A personal portfolio web application built with React and Vite.  
-The project showcases personal information, skills, education, projects, and contact details in a clean and responsive interface.  
-The application is fully Dockerized to provide a reliable, repeatable, and professional development environment.
-
-## Features
-- Responsive personal portfolio website
-- Sections: About, Skills, Education, Projects, Customers, Contact
-- Dark / Light mode support
-- Smooth scrolling navigation
-- Dockerized setup for easy execution
+A personal portfolio web application built using React and Vite as part of the Operating Systems Lab assignments.  
+The project presents personal information, skills, projects, and contact details, and is fully Dockerized to ensure consistent development and deployment environments.
 
 ## Tech Stack
-- React
-- Vite
-- JavaScript
-- HTML / CSS
-- Node.js
-- Docker
+React  
+Vite  
+JavaScript  
+HTML / CSS  
+Docker  
+Git & GitHub  
 
-## Project Structure
-Mufid-Portfolio-WebApp/
-├─ src/                     Application source code  
-├─ docs/                    Documentation files  
-│  ├─ screenshots/          Assignment screenshots  
-│  └─ notes.md              Technical notes  
-├─ Dockerfile               Docker configuration  
-├─ .dockerignore            Docker ignore rules  
-├─ .gitignore               Git ignore rules  
-├─ README.md                Project documentation  
+## Project Description
+This project is a single-page web application that represents a personal portfolio.  
+It allows visitors to view skills, projects, experience, and contact information through a clean and responsive interface.
 
-## Run the Project Using Docker
+## Running the Project Locally with Docker
 
-Build the Docker image:
+Build Docker image:
 docker build -t mufid-portfolio .
 
-Run the Docker container:
+Run Docker container:
 docker run -p 5173:5173 mufid-portfolio
 
-Open your browser and visit:
+Open in browser:
 http://localhost:5173
 
-## Stop the Container
-Press CTRL + C in the terminal  
-or stop it manually using:
-docker ps  
-docker stop <container_id>
+## Production Deployment on VPS
 
-## Configuration Notes
-- Default exposed port: 5173
-- No environment variables required
-- The project runs using the Vite development server
+Install Git and Docker:
+git --version
+docker --version
 
-## How to Test the Application
-- Open the website in the browser
-- Navigate between sections using the navbar
-- Toggle Dark / Light mode
-- Click on project cards to view details
+If not installed:
+sudo apt update
+sudo apt install git docker.io -y
 
-## Attribution
-This project is an original personal portfolio created by the author.  
-No external open-source project was used as a base.
+Clone the repository:
+git clone https://github.com/mufid-2004/Mufid-Portfolio-WebApp.git
+cd Mufid-Portfolio-WebApp
+
+Build Docker image:
+docker build -t mufid-portfolio .
+
+Run Docker container:
+docker run -p 80:5173 mufid-portfolio
+
+## Production URL
+http://<VPS-IP>
+
+## Screenshots
+All required screenshots are available inside:
+docs/screenshots/
+
+## Author
+Mufid Nemer Shahada  
+Islamic University of Gaza  
+Operating Systems Lab  

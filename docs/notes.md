@@ -1,22 +1,34 @@
-# Technical Notes – OS LAB Assignment 2
+Deployment Notes – Assignment 3
 
-## Docker Challenge and Solution
+VPS Deployment Experience
 
-The main challenge faced in this assignment was running a React + Vite application inside a Docker container and accessing it from the host machine.
+This assignment required deploying the Dockerized project from Assignment 2 to a production-like VPS environment.
 
-Although the Docker image was built successfully, the application was not accessible from the browser at first. The issue was caused by Vite binding to localhost inside the container by default.
+Challenges Faced
 
-This problem was solved by running the Vite development server using:
-vite --host
+1. VPS Setup Problems  
+The initial VPS provider failed to create the workspace correctly.  
+The issue was resolved by switching to an alternative web-based Docker environment.
 
-This allowed the application to listen on all network interfaces, making it accessible through the mapped Docker port.
+2. Vite External Host Blocking  
+When running the container, the application was not accessible externally due to Vite blocking unknown hosts.  
+This was solved by running Vite with the --host flag inside Docker.
 
-## Git and GitHub Lessons Learned
+3. Missing Tools on VPS  
+Some basic tools such as nano were not available in the VPS environment.  
+The solution was editing files locally, pushing them to GitHub, then pulling the updated version on the VPS.
 
-This assignment emphasized professional Git and GitHub practices. Through this work, I learned how to:
-- Organize a clean and professional repository structure
-- Write meaningful commit messages that reflect real development progress
-- Document the project clearly using README files
-- Maintain a clear and professional commit history
+4. Container Stopping After Session Ends  
+When the VPS session stopped, the container stopped as well.  
+The solution was rebuilding and running the container again using Docker commands.
 
-Overall, this assignment improved my understanding of Dockerized workflows and professional version control using GitHub.
+Lessons Learned
+
+- How to deploy a Dockerized application to a VPS
+- How to use GitHub repositories in production environments
+- How to troubleshoot Docker networking issues
+- How Docker simplifies deployment and environment consistency
+
+Final Result
+
+The project was successfully deployed on a VPS and accessed through the server IP using Docker.
