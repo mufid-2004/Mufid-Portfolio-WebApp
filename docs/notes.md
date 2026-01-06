@@ -32,3 +32,7 @@ Lessons Learned
 Final Result
 
 The project was successfully deployed on a VPS and accessed through the server IP using Docker.
+
+Recent Updates:
+- Added screenshots for latest commits.
+- Updated README.md and notes.md to reflect VPS deployment steps and production URL.
